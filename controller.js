@@ -6,8 +6,7 @@ const get=(req,res)=>{
     const alerta='true'===req.query.alerta;
     const alertTitle=req.query.alertTitle;
     const alertMessage=req.query.alertMessage;
-    // const filePath=path.join(__dirname,"/static","/views","contact.html")
-    // res.sendFile(filePath);
+    
     res.render('contact',{ alerta, alertTitle, alertMessage });
 }
 const post=(req,res)=>{
