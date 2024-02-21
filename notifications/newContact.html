@@ -1,0 +1,58 @@
+<div
+  class="container"
+  style="
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    /* margin: 0;
+    padding: 0; */
+  "
+>
+  <h1 style="text-align: center">New Contact !!</h1>
+  <p
+    style="
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    "
+  >
+    Name: {{contactName}}
+  </p>
+  <p
+    style="
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    "
+  >
+    Email: {{contactEmail}}
+  </p>
+  <label for="message">Message:</label>
+  <textarea
+    style="
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      height: 150px;
+    "
+    id="message"
+    name="message"
+    readonly
+  >
+{{contactMessage}}</textarea
+  >
+</div>

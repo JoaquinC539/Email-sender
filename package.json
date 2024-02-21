@@ -1,0 +1,28 @@
+{
+  "name": "email-sender",
+  "version": "1.0.0",
+  "description": "email sender practice",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "notification",
+    "email"
+  ],
+  "author": "JC",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.9"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
