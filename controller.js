@@ -12,16 +12,25 @@ const get=(req,res)=>{
 const post=(req,res)=>{
     const contactName=req.body["name"]
     const contactEmail=req.body["email"]
-    const contactMessage=req.body["message"];    
-    let htmlBody=notificationTemplates('newContact.html')
+    const contactMessage=req.body["message"];
+    let img=path.join(__dirname,"resources","images","surprise.jpg");    
+    let htmlBody=notificationTemplates('newContact.html')    
     .replace('{{contactName}}', contactName)
     .replace('{{contactEmail}}', contactEmail)
-    .replace('{{contactMessage}}', contactMessage);
+    .replace('{{contactMessage}}', contactMessage)    
     const mailOptions={
         from:process.env.EMAIL_SENDER_USER,
         to:process.env.EMAIL_SENDER_USER,
         subject:"New Contact",
-        html: htmlBody
+        html: htmlBody,
+        attachments:[
+            {
+                filename:"surprise.jpg",
+                path:path.join(__dirname,"resources","images","surprise.jpg"),
+                cid:"surpise_img"
+            }
+        ]
+
     }
     
     transporter.sendMail(mailOptions,(error,info)=>{
